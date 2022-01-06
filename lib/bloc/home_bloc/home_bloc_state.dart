@@ -9,15 +9,6 @@ abstract class HomeBlocState extends Equatable {
 
 class HomeBlocInitialState extends HomeBlocState {}
 
-class HomeBlocLoadingState extends HomeBlocState {}
-
-class HomeBlocLoadedState extends HomeBlocState {
-  final dynamic data;
-  const HomeBlocLoadedState(this.data);
-  @override
-  List<Object> get props => [data];
-}
-
 class HomeBlocErrorState extends HomeBlocState {
   final String error;
 
