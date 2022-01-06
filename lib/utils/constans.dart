@@ -1,9 +1,14 @@
-class BC {
-  static get font => const _Font();
+class C {
+  static const font = _Font();
+  static const color = _Color();
 }
 
 class _Font {
   const _Font();
 
-  static const avenir = "Avenir";
+  get avenir => "Avenir";
+}
+
+class _Color {
+  const _Color();
 }
