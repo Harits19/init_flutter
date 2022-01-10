@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:github_app/utils/constans.dart';
 import 'package:github_app/utils/helper.dart';
 
 class GiftDetailPage extends StatelessWidget {
