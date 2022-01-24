@@ -3,6 +3,7 @@ import 'package:github_app/common/base/base_constans.dart';
 
 class T {
   static const button = _Button();
+  static const text = _Text();
 }
 
 class _Button {
@@ -22,4 +23,9 @@ class _Button {
 
   MaterialStateProperty<Color> get greenOpacityColor =>
       MaterialStateProperty.all<Color>(C.color.green.withOpacity(0.1));
+}
+
+class _Text {
+  const _Text();
+  TextStyle get defaultStyle => TextStyle();
 }
