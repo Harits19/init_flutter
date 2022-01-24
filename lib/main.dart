@@ -6,6 +6,7 @@ import 'package:github_app/bloc/gift_bloc/gift_bloc_cubit.dart';
 import 'package:github_app/utils/app_bloc_observer.dart';
 import 'package:github_app/utils/get_it_config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:github_app/utils/helper.dart';
 
 void main() async {
   await setupDepedencyInjection();
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         useInheritedMediaQuery: true,
         theme: ThemeData(
+          primarySwatch: Helper.func.createMaterialColor(C.color.baliHai),
           splashColor: C.color.green.withOpacity(0.4),
           scaffoldBackgroundColor: Colors.white,
           textTheme: newTextTheme,
