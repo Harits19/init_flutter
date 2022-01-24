@@ -1,22 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:github_app/common/base/base_constans.dart';
-
-class T {
-  static const button = _Button();
-  static const text = _Text();
-}
+part of 'base.dart';
 
 class _Button {
   const _Button();
   MaterialStateProperty<OutlinedBorder> get outlineBorder =>
       MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(C.size.getSize(24)),
+          borderRadius: BorderRadius.circular(C.num.getSize(24)),
         ),
       );
 
   MaterialStateProperty<Size> get minimumSize =>
-      MaterialStateProperty.all<Size>(Size(0, C.size.getSize(42)));
+      MaterialStateProperty.all<Size>(Size(0, C.num.getSize(42)));
 
   MaterialStateProperty<Color> get greenColor =>
       MaterialStateProperty.all<Color>(C.color.green);

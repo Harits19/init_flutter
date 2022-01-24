@@ -1,10 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:github_app/base/base.dart';
 import 'package:github_app/bloc/gift_bloc/gift_bloc_cubit.dart';
-import 'package:github_app/common/base/base_theme.dart';
 import 'package:github_app/utils/app_bloc_observer.dart';
-import 'package:github_app/common/base/base_constans.dart';
 import 'package:github_app/utils/get_it_config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
