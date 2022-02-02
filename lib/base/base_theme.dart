@@ -51,84 +51,12 @@ class _Button {
       minimumSize: T.button.minimumSize,
       shape: T.button.outlineBorder,
       foregroundColor: foregroundColor,
-      textStyle: MaterialStateProperty.all<TextStyle>(T.text.buttonStyle));
+      textStyle: MaterialStateProperty.all<TextStyle>(T.text.notoStyle));
 }
 
 class _Text {
   const _Text();
-  TextStyle get notoStyle => TextStyle(fontFamily: C.font.notoSans);
-
-  TextStyle get h1 => TextStyle(
-        fontFamily: C.font.poppins,
-        fontSize: 32,
-        fontWeight: FontWeight.w700,
-      );
-  TextStyle get h2 => h1.copyWith(fontSize: 30);
-  TextStyle get h3 => h1.copyWith(fontSize: 14);
-  TextStyle get h4 => h1.copyWith(fontSize: 12);
-
-  TextStyle get body1 => TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w700,
-      );
-
-  TextStyle get body2 => TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w500,
-      );
-  TextStyle get body2Bold => body2.copyWith(
-        fontWeight: FontWeight.w700,
-      );
-  TextStyle get body3 => TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-      );
-  TextStyle get body4 => TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-      );
-  TextStyle get body4Bold => body4.copyWith(
-        fontWeight: FontWeight.w700,
-      );
-
-  TextStyle get inputStlye => body4;
-  TextStyle get buttonStyle => TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w500,
-        fontFamily: C.font.notoSans,
-      );
-
-  TextStyle get body5 => TextStyle(
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-      );
-  TextStyle get body5Bold => body5.copyWith(
-        fontWeight: FontWeight.w700,
-      );
-
-  TextStyle get light1 => TextStyle(
-        fontWeight: FontWeight.w300,
-        fontSize: 12,
-        fontFamily: C.font.poppins,
-      );
-
-  TextStyle get bottomText => TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: 8,
-        fontFamily: C.font.poppins,
-      );
-
-  TextStyle get detailSchedule => TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize: 14,
-        fontFamily: C.font.poppins,
-      );
-
-  TextStyle get cancelText => TextStyle(
-        fontWeight: FontWeight.w600,
-        fontSize: 10,
-        fontFamily: C.font.poppins,
-      );
+  TextStyle get notoStyle => TextStyle();
 }
 
 class _Decoration {

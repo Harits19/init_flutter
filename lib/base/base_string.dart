@@ -61,6 +61,6 @@ class _String {
 class _Font {
   const _Font();
 
-  String get notoSans => "NotoSans";
-  String get poppins => "Poppins";
+  // String get notoSans => "NotoSans";
+  // String get poppins => "Poppins";
 }
