@@ -65,6 +65,40 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
+  # {
+  # FontWeight.w100: 'Thin',
+  # FontWeight.w200: 'ExtraLight',
+  # FontWeight.w300: 'Light',
+  # FontWeight.w400: 'Regular',
+  # FontWeight.w500: 'Medium',
+  # FontWeight.w600: 'SemiBold',
+  # FontWeight.w700: 'Bold',
+  # FontWeight.w800: 'ExtraBold',
+  # FontWeight.w900: 'Black',
+  # }
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: fonts/Poppins-Thin.ttf
+  #         weight: 100
+  #       - asset: fonts/Poppins-ExtraLight.ttf
+  #         weight: 200
+  #       - asset: fonts/Poppins-Light.ttf
+  #         weight: 300
+  #       - asset: fonts/Poppins-Regular.ttf
+  #         weight: 400
+  #       - asset: fonts/Poppins-Medium.ttf
+  #         weight: 500
+  #       - asset: fonts/Poppins-SemiBold.ttf
+  #         weight: 600
+  #       - asset: fonts/Poppins-Bold.ttf
+  #         weight: 700
+  #       - asset: fonts/Poppins-ExtraBold.ttf
+  #         weight: 800
+  #       - asset: fonts/Poppins-Black.ttf
+  #         weight: 900
+
   # fonts:
   #   - family: Schyler
   #     fonts:
