@@ -1,6 +1,6 @@
 {
-    "name": "github_app",
-    "short_name": "github_app",
+    "name": "init_flutter",
+    "short_name": "init_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

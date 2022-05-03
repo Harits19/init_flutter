@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:github_app/konstans/konstans.dart';
+import 'package:init_flutter/konstans/konstans.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class ApiConfig {

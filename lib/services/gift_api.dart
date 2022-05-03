@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:github_app/models/api_response.dart';
-import 'package:github_app/models/gift.dart';
-import 'package:github_app/utils/api_config.dart';
+import 'package:init_flutter/models/api_response.dart';
+import 'package:init_flutter/models/gift.dart';
+import 'package:init_flutter/utils/api_config.dart';
 
 class GiftApi {
   GiftApi(this._dio);

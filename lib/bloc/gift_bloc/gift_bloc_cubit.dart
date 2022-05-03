@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:github_app/models/gift.dart';
-import 'package:github_app/services/gift_api.dart';
+import 'package:init_flutter/models/gift.dart';
+import 'package:init_flutter/services/gift_api.dart';
 
 part 'gift_bloc_state.dart';
 
