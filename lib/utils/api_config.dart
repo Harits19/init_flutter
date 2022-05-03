@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:github_app/base/base.dart';
+import 'package:github_app/konstans/konstans.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class ApiConfig {
@@ -26,7 +26,7 @@ class ApiConfig {
   ) {
     return {
       "page[number]": page,
-      "page[size]": C.num.pageSize,
+      "page[size]": KNum.pageSize,
     };
   }
 }

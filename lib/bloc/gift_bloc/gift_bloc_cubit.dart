@@ -14,7 +14,8 @@ class GiftBlocCubit extends Cubit<GiftBlocState> {
   getGiftCubit({required int page}) {
     final state = this.state as GiftBlocLoadedState;
     emit(GiftBlocLazyLoadingState(state.gifts));
-    giftApi.getGifts(
+    giftApi
+        .getGifts(
       page: page,
       onSuccess: (val) {
         if (val.isEmpty) {
@@ -22,7 +23,9 @@ class GiftBlocCubit extends Cubit<GiftBlocState> {
         }
         emit(GiftBlocLoadedState([...state.gifts, ...val]));
       },
-      onError: (err) {
+    )
+        .catchError(
+      (err) {
         emit(GiftBlocErrorState(err));
       },
     );

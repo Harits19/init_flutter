@@ -11,49 +11,34 @@ class GiftApi {
 
   late final Dio _dio;
 
-  getGifts({
+  Future<void> getGifts({
     required ValueChanged<List<Gift>> onSuccess,
-    required ValueChanged<String> onError,
     required int page,
   }) async {
-    try {
-      final response = await _dio.get(
-        "/gifts",
-        queryParameters: ApiConfig.toParameter(page),
-      );
-      final stringResponse = jsonDecode(response.data);
-      final parsed = ApiResponse.fromJson(stringResponse);
-      if (parsed.data == null) {
-        onError("Unexpected Error");
-        return;
-      }
-      final result = parsed.data!
-          .map((dynamic e) => Gift.fromJson(e as Map<String, dynamic>))
-          .toList();
-      onSuccess(result);
-    } on DioError catch (e) {
-      onError(e.message);
-    } on Exception catch (e) {
-      onError(e.toString());
+    final response = await _dio.get(
+      "/gifts",
+      queryParameters: ApiConfig.toParameter(page),
+    );
+    final stringResponse = jsonDecode(response.data);
+    final parsed = ApiResponse.fromJson(stringResponse);
+    if (parsed.data == null) {
+      throw "Unexpected Error";
     }
+    final result = parsed.data!
+        .map((dynamic e) => Gift.fromJson(e as Map<String, dynamic>))
+        .toList();
+    onSuccess(result);
   }
 
   getDetailGifts({
     required ValueChanged<Gift> onSuccess,
-    required ValueChanged<String> onError,
     required String id,
   }) async {
-    try {
-      final response = await _dio.get(
-        "/gifts/$id",
-      );
-      final parsed = jsonDecode(response.data);
-      final result = Gift.fromJson(parsed);
-      onSuccess(result);
-    } on DioError catch (e) {
-      onError(e.message);
-    } on Exception catch (e) {
-      onError(e.toString());
-    }
+    final response = await _dio.get(
+      "/gifts/$id",
+    );
+    final parsed = jsonDecode(response.data);
+    final result = Gift.fromJson(parsed);
+    onSuccess(result);
   }
 }

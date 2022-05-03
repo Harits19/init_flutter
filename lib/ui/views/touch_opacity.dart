@@ -14,25 +14,19 @@ class TouchOpacity extends StatefulWidget {
 }
 
 class _TouchOpacityState extends State<TouchOpacity> {
-  bool isDown = false;
-
-  @override
-  void initState() {
-    super.initState();
-    setState(() => isDown = false);
-  }
+  bool _isDown = false;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTapDown: (_) => setState(() => isDown = true),
-      onTapUp: (_) => setState(() => isDown = false),
-      onTapCancel: () => setState(() => isDown = false),
+      onTapDown: (_) => setState(() => _isDown = true),
+      onTapUp: (_) => setState(() => _isDown = false),
+      onTapCancel: () => setState(() => _isDown = false),
       onTap: widget.onTap,
       child: AnimatedOpacity(
         child: widget.child,
         duration: widget.duration,
-        opacity: isDown ? widget.opacity : 1,
+        opacity: _isDown ? widget.opacity : 1,
       ),
     );
   }

@@ -1,4 +1,4 @@
-part of 'base.dart';
+part of 'konstans.dart';
 
 enum UserRole {
   student,
