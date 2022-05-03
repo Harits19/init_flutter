@@ -38,13 +38,41 @@ class MyApp extends StatelessWidget {
           splashColor: KColor.blumine.withOpacity(0.4),
           scaffoldBackgroundColor: Colors.white,
           // textTheme: newTextTheme,
-          outlinedButtonTheme: KButton.outlineButtonTheme,
-          elevatedButtonTheme: KButton.elevatedButtonTheme,
+          // buttonTheme: ButtonThemeData(),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: KButton.outlinedStyle,
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: KButton.elevatedStyle,
+          ),
           inputDecorationTheme: KDecor.input,
         ),
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        home: const Scaffold(),
+        home: Scaffold(
+          body: SafeArea(
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: null,
+                  child: Text("ElevatedButton Disable"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text("ElevatedButton Disable"),
+                ),
+                OutlinedButton(
+                  onPressed: null,
+                  child: Text("OutlinedButton Disable"),
+                ),
+                OutlinedButton(
+                  onPressed: () {},
+                  child: Text("OutlinedButton Disable"),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -2,7 +2,8 @@ part of 'konstans.dart';
 
 class KColor {
   const KColor._();
-  static const testConst = "";
+  
+  static const buttonPrimary = KColor.yellow;
 
   static const yellow = Color(0xffF0D946);
   static const baliHai = Color(0xff838EAB);
