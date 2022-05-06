@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:init_flutter/bloc/home_bloc/home_bloc_cubit.dart';
 import 'package:init_flutter/konstans/konstans.dart';
 import 'package:init_flutter/utils/app_bloc_observer.dart';
+import 'package:init_flutter/utils/extensions.dart';
 import 'package:init_flutter/utils/get_it_config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:init_flutter/utils/k_function.dart';
@@ -50,6 +53,16 @@ class MyApp extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
+                Container(
+                  child: Text("Test InkWell"),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                ).inkWell(onTap: () {}),
+                Card(
+                  child: Text("Test InkWell"),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ).inkWell(onTap: () {}),
                 ElevatedButton(
                   onPressed: null,
                   child: Text("ElevatedButton Disable"),
