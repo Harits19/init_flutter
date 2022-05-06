@@ -6,7 +6,7 @@ import 'package:init_flutter/konstans/konstans.dart';
 import 'package:init_flutter/utils/app_bloc_observer.dart';
 import 'package:init_flutter/utils/get_it_config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:init_flutter/utils/helper.dart';
+import 'package:init_flutter/utils/k_function.dart';
 
 void main() async {
   await setupDepedencyInjection();
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         useInheritedMediaQuery: true,
         theme: ThemeData(
-          primarySwatch: Helper.func.createMaterialColor(KColor.baliHai),
+          primarySwatch: KFunction.createMaterialColor(KColor.baliHai),
           splashColor: KColor.blumine.withOpacity(0.4),
           scaffoldBackgroundColor: Colors.white,
           // textTheme: newTextTheme,
