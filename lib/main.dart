@@ -11,10 +11,9 @@ import 'package:init_flutter/utils/helper.dart';
 void main() async {
   await setupDepedencyInjection();
   BlocOverrides.runZoned(
-    () => runApp(DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => const MyApp(),
-    )),
+    () => runApp(
+      const MyApp(),
+    ),
     blocObserver: AppBlocObserver(),
   );
 }
@@ -47,8 +46,6 @@ class MyApp extends StatelessWidget {
           ),
           inputDecorationTheme: KDecor.input,
         ),
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
         home: Scaffold(
           body: SafeArea(
             child: Column(
