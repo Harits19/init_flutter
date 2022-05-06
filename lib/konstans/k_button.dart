@@ -17,14 +17,14 @@ class KButton {
       );
     }
     return const BorderSide(
-      color: KColor.buttonPrimary,
+      color: KColor.primary,
     );
   }));
 
   static final matColor = MaterialStateProperty.resolveWith<Color>(
     (Set<MaterialState> states) {
       if (states.contains(MaterialState.disabled)) return KColor.silver;
-      return KColor.buttonPrimary; // Use the component's default.
+      return KColor.primary; // Use the component's default.
     },
   );
 
@@ -33,7 +33,7 @@ class KButton {
     minimumSize: size52,
     shape: rectangle20,
     textStyle: KText.notoStyle,
-    primary: KColor.buttonPrimary ,
+    primary: KColor.primary,
   ).copyWith(
     // Use this if changes follor MaterialState
     foregroundColor: matColor,

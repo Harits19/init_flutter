@@ -36,8 +36,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         useInheritedMediaQuery: true,
         theme: ThemeData(
-          primarySwatch: KFunction.createMaterialColor(KColor.baliHai),
-          splashColor: KColor.blumine.withOpacity(0.4),
+          primarySwatch: KFunction.createMaterialColor(KColor.blumine),
+          splashColor: KColor.primary.withOpacity(0.4),
           scaffoldBackgroundColor: Colors.white,
           // textTheme: newTextTheme,
           // buttonTheme: ButtonThemeData(),
@@ -57,12 +57,17 @@ class MyApp extends StatelessWidget {
                   child: Text("Test InkWell"),
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                ).inkWell(onTap: () {}),
+                ).inkWell(InkWell(
+                  onTap: () {},
+                )),
                 Card(
                   child: Text("Test InkWell"),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                ).inkWell(onTap: () {}),
+                ).inkWell(InkWell(
+                  onTap: () {},
+                  splashColor: KColor.yellow,
+                )),
                 ElevatedButton(
                   onPressed: null,
                   child: Text("ElevatedButton Disable"),
