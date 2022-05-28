@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:init_flutter/ui/views/touch_opacity.dart';
 
 class KExtension {}
 

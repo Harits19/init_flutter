@@ -1,7 +1,3 @@
-import 'dart:io';
-
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:init_flutter/bloc/home_bloc/home_bloc_cubit.dart';
 import 'package:init_flutter/konstans/konstans.dart';
@@ -12,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:init_flutter/utils/k_function.dart';
 
 void main() async {
-  await setupDepedencyInjection();
+  await setupDependencyInjection();
   BlocOverrides.runZoned(
     () => runApp(
       const MyApp(),
@@ -54,35 +50,35 @@ class MyApp extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  child: Text("Test InkWell"),
+                  child: const Text("Test InkWell"),
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
                 ).inkWell(InkWell(
                   onTap: () {},
                 )),
                 Card(
-                  child: Text("Test InkWell"),
+                  child: const Text("Test InkWell"),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                 ).inkWell(InkWell(
                   onTap: () {},
                   splashColor: KColor.yellow,
                 )),
-                ElevatedButton(
+                const ElevatedButton(
                   onPressed: null,
                   child: Text("ElevatedButton Disable"),
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text("ElevatedButton Disable"),
+                  child: const Text("ElevatedButton Enable"),
                 ),
-                OutlinedButton(
+                const OutlinedButton(
                   onPressed: null,
                   child: Text("OutlinedButton Disable"),
                 ),
                 OutlinedButton(
                   onPressed: () {},
-                  child: Text("OutlinedButton Disable"),
+                  child: const Text("OutlinedButton Enable"),
                 ),
               ],
             ),
