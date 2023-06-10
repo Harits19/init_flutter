@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:developer' as dev;
 
-void log(
+void myLog(
   dynamic message, {
   DateTime? time,
   int? sequenceNumber,

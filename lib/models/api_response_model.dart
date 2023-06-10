@@ -1,15 +1,15 @@
-class ApiResponse {
+class ApiResponseModel {
   Meta? meta;
   List<dynamic>? data;
   Links? links;
 
-  ApiResponse({
+  ApiResponseModel({
     this.meta,
     this.data,
     this.links,
   });
 
-  ApiResponse.fromJson(Map<String, dynamic> json) {
+  ApiResponseModel.fromJson(Map<String, dynamic> json) {
     meta = (json['meta'] as Map<String, dynamic>?) != null
         ? Meta.fromJson(json['meta'] as Map<String, dynamic>)
         : null;
