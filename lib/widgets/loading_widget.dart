@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:init_flutter/views/widget_util.dart';
+import 'package:init_flutter/widgets/widget_util.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});

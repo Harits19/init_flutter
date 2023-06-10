@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:init_flutter/extensions/string_extension.dart';
-import 'package:init_flutter/views/icon_button_widget.dart';
+import 'package:init_flutter/widgets/icon_button_widget.dart';
 
 class TextFieldWidget extends StatefulWidget {
   const TextFieldWidget({
