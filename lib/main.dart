@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:init_flutter/konstans/konstans.dart';
 
 void main() async {
   runApp(
@@ -13,12 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        splashColor: KColor.primary.withOpacity(0.4),
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      home: const Scaffold(
+    return const MaterialApp(
+      home: Scaffold(
         body: SafeArea(
           child: Column(
             children: [],

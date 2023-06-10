@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:init_flutter/ui/views/widget_util.dart';
+import 'package:init_flutter/views/widget_util.dart';
 import 'package:init_flutter/utils/my_log_util.dart';
 
 class SnackbarWidget extends StatelessWidget {
