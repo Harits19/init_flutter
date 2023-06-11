@@ -18,7 +18,7 @@ class AsyncValueModel<T> {
   AsyncValueModel<T> loading() => AsyncValueModel(
         isLoading: true,
         value: value,
-        error: error,
+        error: null,
       );
 
   Future<AsyncValueModel<T>> guard(Future<T> Function() callback) async {
