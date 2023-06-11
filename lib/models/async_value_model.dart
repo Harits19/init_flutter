@@ -37,8 +37,16 @@ class AsyncValueModel<T> {
     }
   }
 
-  AsyncValueModel<T> data(T data) {
-    return AsyncValueModel(isLoading: false, value: data, error: null);
+  AsyncValueModel<T> setValue(T value) {
+    return AsyncValueModel(isLoading: false, value: value, error: null);
+  }
+
+  AsyncValueModel<T> setError(Object? error) {
+    return AsyncValueModel(
+      isLoading: false,
+      value: value,
+      error: error,
+    );
   }
 
   bool get hasError => error != null;
